@@ -67,6 +67,7 @@ http://localhost:8501
 
 ## Important
 
+- Gunakan pyton versi 3.12.\*
 - Pastikan file data yang diupload memiliki kolom `Date` (mm-yyyy) dan Data Time Series.
 - Gunakan slider untuk memilih langkah forecast sesuai kebutuhan.
 - Perhatikan peringatan atau pesan error di aplikasi untuk memastikan kelancaran aplikasi.
