@@ -36,9 +36,9 @@ def check_stationarity(data):
 
 with st.sidebar:
     selected = option_menu(
-        menu_title="Sidebar",
+        menu_title="Menu",
         options=["Home", "Plot Data Awal", "Cek Stasioner",
-                 "Diferencing", "Plot ACF & PACF", "Fit Model", "Forecast"],
+                 "Diferencing", "Plot ACF & PACF", "Best Model (Auto)", "Fit Model", "Forecast"],
         default_index=0
     )
 
@@ -46,14 +46,15 @@ with st.sidebar:
 
 if selected == "Home":
     st.title("Selamat Datang di Aplikasi Forecasting - SARIMA")
-    st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+    st.write("Aplikasi web untuk melakukan forecasting menggunakan metode SARIMA. Aplikasi ini dapat input data dari file CSV, fitting model SARIMA, serta menampilkan prediksi dan perbandingan data aktual dengan hasil forecasting. \n\nNB: Pastikan kolom tanggal memiliki format mm-yyyy. ex: 12-2022")
 
 # <========================================= UPLOAD DATA =========================================>
 
 if selected == "Plot Data Awal":
     st.title("Plot Data Awal")
 
-    uploaded_file = st.file_uploader("Upload file CSV Anda", type=["csv"])
+    uploaded_file = st.file_uploader(
+        "Upload file CSV Anda\n\nPastikan format kolom date mm-yyyy (12-2022)", type=["csv"])
 
     if uploaded_file is not None:
         st.session_state.uploaded_data = pd.read_csv(uploaded_file)
