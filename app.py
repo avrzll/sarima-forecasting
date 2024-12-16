@@ -46,7 +46,7 @@ with st.sidebar:
 
 if selected == "Home":
     st.title("Selamat Datang di Aplikasi Forecasting - SARIMA")
-    st.write("Aplikasi web untuk melakukan forecasting menggunakan metode SARIMA. Aplikasi ini dapat input data dari file CSV, fitting model SARIMA, serta menampilkan prediksi dan perbandingan data aktual dengan hasil forecasting. \n\nNB: Pastikan kolom tanggal memiliki format mm-yyyy. ex: 12-2022")
+    st.write("Aplikasi web untuk melakukan forecasting menggunakan metode SARIMA. Aplikasi dapat input data berupa file CSV, fitting model SARIMA, serta menampilkan prediksi dan perbandingan data aktual dengan hasil forecasting. \n\nNB: Pastikan kolom tanggal memiliki format mm-yyyy. ex: 12-2022")
 
 # <========================================= UPLOAD DATA =========================================>
 
